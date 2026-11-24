@@ -6,7 +6,7 @@ Prometheus metrics client for [Zap](https://github.com/zaplang-io/zap) — an of
 - Contributor & agent conventions: [AGENTS.md](AGENTS.md)
 - Design decisions: [DECISIONS.md](DECISIONS.md)
 
-Instrument a Zap service and expose its metrics in the Prometheus text format over an HTTP `/metrics` endpoint. The [Tier-1 epic](https://github.com/zaplang-io/prometheus/issues/1) tracks the metric types, exposition format, and HTTP server.
+Instrument a Zap service and expose its metrics in the Prometheus text format over an HTTP `/metrics` endpoint. The [Tier-1 epic](https://github.com/zaplang-io/prometheus/issues/2) tracks the metric types, exposition format, and HTTP server.
 
 ## Goals
 
@@ -19,7 +19,7 @@ Planned scope (first cut):
 - **Text exposition** — `generate_latest(registry)` renders the registry to the Prometheus/OpenMetrics text format, with `CONTENT_TYPE_LATEST`.
 - **HTTP exposition** — `start_http_server(port, ...)` serves `/metrics` for a Prometheus scraper.
 
-Deferred to later issues (named in the [epic](https://github.com/zaplang-io/prometheus/issues/1), not in the first slice):
+Deferred to later issues (named in the [epic](https://github.com/zaplang-io/prometheus/issues/2), not in the first slice):
 
 - **`Histogram` and `Summary`** — bucketed observations and quantiles.
 - **`Info` and `Enum`** metric types.
